@@ -8,7 +8,7 @@ Download patents as PDF documents from [Google Patents](https://patents.google.c
 You can install the development version from [GitHub](https://github.com/) with:
 
 ``` python
-pip install git+https://github.com/lorenzbr/GooglePatentsPdfDownloader.git
+pip install git+https://github.com/UoooBarry/GooglePatentsPdfDownloader.git
 ```
 
 Please make sure you have [Google Chrome](https://www.google.com/chrome/) and the corresponding chromedriver.exe (see [here](https://chromedriver.chromium.org/downloads)) installed to access the website using Selenium.
