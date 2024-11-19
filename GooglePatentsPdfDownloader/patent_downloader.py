@@ -95,7 +95,7 @@ class PatentDownloader:
             driver = webdriver.Chrome()
         driver.get(self.url)
     
-        element = driver.find_element_by_name('q')
+        element = driver.find_element("name", "q")
         element.send_keys(patent)
         element.send_keys(Keys.RETURN)
         time.sleep(waiting_time)  # wait X secs
