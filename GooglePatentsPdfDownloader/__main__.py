@@ -9,8 +9,6 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
     'patent', nargs='+', help='Patent number(s) to be downloaded')
 parser.add_argument(
-    '--driver', help='Path and file name of the Chrome driver exe', default='chromedriver.exe')
-parser.add_argument(
     '--brave', help='Switch application from Google Chrome to Brave.', action='store_true')
 parser.add_argument(
     '--output', help='An output path where documents are saved', default='./pdf')
@@ -30,8 +28,8 @@ kwargs = dict(
 )
 
 if args.brave:
-    pat_dl = PatentDownloader(chrome_driver=args.driver, brave=args.brave)
+    pat_dl = PatentDownloader(brave=args.brave)
 else:
-    pat_dl = PatentDownloader(chrome_driver=args.driver)
+    pat_dl = PatentDownloader()
 
 pat_dl.download(**kwargs)
